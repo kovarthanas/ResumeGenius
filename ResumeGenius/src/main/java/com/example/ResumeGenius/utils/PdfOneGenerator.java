@@ -1,7 +1,5 @@
 package com.example.ResumeGenius.utils;
 
-import com.example.ResumeGenius.entity.*;
-import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.example.ResumeGenius.entity.*;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 

@@ -1,8 +1,8 @@
 package com.resume.genius.controller;
 
 
-import com.resume.genius.dto.LoginDTO;
-import com.resume.genius.dto.UserDTO;
+import com.resume.genius.dto.LoginDto;
+import com.resume.genius.dto.UserDto;
 import com.resume.genius.service.UserService;
 import com.resume.genius.LoginMesage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +20,14 @@ public class UserController {
 
 
     @PostMapping(path = "/signup")
-    public String saveUser(@RequestBody UserDTO userDTO)
+    public String saveUser(@RequestBody UserDto userDTO)
     {
         String id = userService.addUser(userDTO);
         return "User Data Inserted Successfully";
     }
 
     @PostMapping(path = "/login")
-    public ResponseEntity<?> loginUser(@RequestBody LoginDTO loginDTO)
+    public ResponseEntity<?> loginUser(@RequestBody LoginDto loginDTO)
     {
         LoginMesage loginResponse = userService.loginUser(loginDTO);
         return ResponseEntity.ok(loginResponse);

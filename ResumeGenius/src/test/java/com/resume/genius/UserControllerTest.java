@@ -1,8 +1,8 @@
 package com.resume.genius;
 
 import com.resume.genius.controller.UserController;
-import com.resume.genius.dto.LoginDTO;
-import com.resume.genius.dto.UserDTO;
+import com.resume.genius.dto.LoginDto;
+import com.resume.genius.dto.UserDto;
 import com.resume.genius.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,7 +27,7 @@ public class UserControllerTest {
 
     @Test
     public void testSaveUser() {
-        UserDTO userDTO = new UserDTO(); // create a sample user DTO object
+        UserDto userDTO = new UserDto(); // create a sample user DTO object
         String expectedResponse = "User Data Inserted Successfully"; // define your expected response
 
         when(userService.addUser(userDTO)).thenReturn("sampleId");
@@ -42,7 +42,7 @@ public class UserControllerTest {
 
     @Test
     public void testLoginUser() {
-        LoginDTO loginDTO = new LoginDTO(); // create a sample login DTO object
+        LoginDto loginDTO = new LoginDto(); // create a sample login DTO object
         LoginMesage loginMessage = new LoginMesage("Helllooo",TRUE); // create a sample login message object
 
         when(userService.loginUser(loginDTO)).thenReturn(loginMessage);

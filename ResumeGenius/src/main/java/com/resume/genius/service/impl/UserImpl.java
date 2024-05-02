@@ -2,8 +2,8 @@ package com.resume.genius.service.impl;
 
 
 
-import com.resume.genius.dto.LoginDTO;
-import com.resume.genius.dto.UserDTO;
+import com.resume.genius.dto.LoginDto;
+import com.resume.genius.dto.UserDto;
 import com.resume.genius.repo.UserRepo;
 import com.resume.genius.LoginMesage;
 import com.resume.genius.entity.User;
@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @Service
 
-public class UserIMPL implements UserService {
+public class UserImpl implements UserService {
 
     @Autowired
     private UserRepo userRepo;
@@ -26,7 +26,7 @@ public class UserIMPL implements UserService {
 
 
     @Override
-    public String addUser(UserDTO userDTO) {
+    public String addUser(UserDto userDTO) {
         if (userDTO.getRoleId() == null) {
             userDTO.setRoleId("Admin");
         }
@@ -71,10 +71,10 @@ public class UserIMPL implements UserService {
 
         return user.getFirstName();
     }
-    UserDTO userDTO;
+    UserDto userDTO;
 
     @Override
-    public LoginMesage loginUser(LoginDTO loginDTO) {
+    public LoginMesage loginUser(LoginDto loginDTO) {
         String msg = "";
         User user1 = userRepo.findByEmail(loginDTO.getEmail());
         if (user1 != null) {

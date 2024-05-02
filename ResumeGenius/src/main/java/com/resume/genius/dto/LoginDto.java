@@ -1,13 +1,13 @@
 package com.resume.genius.dto;
 
-public class LoginDTO {
+public class LoginDto {
     private String email;
     private String password;
 
-    public LoginDTO() {
+    public LoginDto() {
     }
 
-    public LoginDTO(String email, String password) {
+    public LoginDto(String email, String password) {
         this.email = email;
         this.password = password;
     } //create getters and setters

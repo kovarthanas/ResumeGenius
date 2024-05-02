@@ -1,13 +1,13 @@
 package com.resume.genius.dto;
 
-public class UserDTO {
+public class UserDto {
 
     private int userid;
     private String username;
     private String email;
     private String password;
 
-    public UserDTO(int userid, String username, String email, String password, String lastName, String saltValue, String cratedDate, String modifiedDate, String status, String roleId, String title) {
+    public UserDto(int userid, String username, String email, String password, String lastName, String saltValue, String cratedDate, String modifiedDate, String status, String roleId, String title) {
         this.userid = userid;
         this.username = username;
         this.email = email;
@@ -85,7 +85,7 @@ public class UserDTO {
 
     private String roleId;
     private String title;
-    public UserDTO() {
+    public UserDto() {
     }
 
     public int getUserid() {
@@ -120,7 +120,7 @@ public class UserDTO {
         this.password = password;
     }
 
-    public UserDTO(int userid, String username, String email, String password) {
+    public UserDto(int userid, String username, String email, String password) {
         this.userid = userid;
         this.username = username;
         this.email = email;

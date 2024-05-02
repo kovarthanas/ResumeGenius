@@ -1,17 +1,17 @@
 package com.resume.genius;
 
-import com.resume.genius.dto.LoginDTO;
+import com.resume.genius.dto.LoginDto;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginDTOTest {
+public class LoginDtoTest {
 
     @Test
     public void testConstructorAndGetters() {
         String email = "test@example.com";
         String password = "password123";
 
-        LoginDTO loginDTO = new LoginDTO(email, password);
+        LoginDto loginDTO = new LoginDto(email, password);
 
         assertEquals(email, loginDTO.getEmail());
         assertEquals(password, loginDTO.getPassword());
@@ -22,7 +22,7 @@ public class LoginDTOTest {
         String email = "test@example.com";
         String password = "password123";
 
-        LoginDTO loginDTO = new LoginDTO();
+        LoginDto loginDTO = new LoginDto();
 
         loginDTO.setEmail(email);
         loginDTO.setPassword(password);

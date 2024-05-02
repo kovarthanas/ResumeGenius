@@ -4,8 +4,8 @@ import static java.lang.Boolean.TRUE;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-import com.resume.genius.dto.LoginDTO;
-import com.resume.genius.dto.UserDTO;
+import com.resume.genius.dto.LoginDto;
+import com.resume.genius.dto.UserDto;
 import com.resume.genius.repo.UserRepo;
 import com.resume.genius.service.UserService;
 import org.junit.Before;
@@ -34,7 +34,7 @@ public class UserServiceTest {
     }
     @Test
     public void testAddUser() {
-        UserDTO userDTO = new UserDTO();
+        UserDto userDTO = new UserDto();
         userDTO.setEmail("test@example.com");
         userDTO.setPassword("password");
 
@@ -48,7 +48,7 @@ public class UserServiceTest {
 
     @Test
     public void testLoginUser() {
-        LoginDTO loginDTO = new LoginDTO();
+        LoginDto loginDTO = new LoginDto();
         loginDTO.setEmail("test@example.com");
         loginDTO.setPassword("password");
 

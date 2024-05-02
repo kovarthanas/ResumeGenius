@@ -23,7 +23,7 @@ public class ResumeController {
     @Autowired
     private PdfOneGenerator pdfGen;
 
-    @PostMapping(path = "/create")
+    @PostMapping
     public ResponseEntity<String> postResume(@Valid @RequestBody Resume resume) throws IOException {
 
         log.info(resume.getHeader());
@@ -34,7 +34,7 @@ public class ResumeController {
         return new ResponseEntity<String>(pdfGen.createDocument(resume), HttpStatus.OK);
     }
 
-    @GetMapping(path = "/view")
+    @GetMapping
     public ResponseEntity<byte[]> getResume(@RequestParam("filename") String filename) throws IOException {
 
         return new ResponseEntity<byte[]>(pdfGen.getDocument(filename), HttpStatus.OK);

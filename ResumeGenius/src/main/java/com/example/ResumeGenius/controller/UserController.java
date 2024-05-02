@@ -23,7 +23,7 @@ public class UserController {
     public String saveUser(@RequestBody UserDTO userDTO)
     {
         String id = userService.addUser(userDTO);
-        return id;
+        return "User Data Inserted Successfully";
     }
 
     @PostMapping(path = "/login")

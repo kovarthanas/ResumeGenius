@@ -4,6 +4,11 @@ public class LoginMesage {
     String message;
     Boolean status;
 
+    public LoginMesage(String message, Boolean status) {
+        this.message = message;
+        this.status = status;
+    }
+
     public String getMessage() {
         return message;
     }
@@ -17,11 +22,6 @@ public class LoginMesage {
     }
 
     public void setStatus(Boolean status) {
-        this.status = status;
-    }
-
-    public LoginMesage(String message, Boolean status) {
-        this.message = message;
         this.status = status;
     }
 }

@@ -1,11 +1,9 @@
 package com.resume.genius.entity;
 
-import jakarta.persistence.Table;
-
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User {
 
     @Id
@@ -24,6 +22,28 @@ public class User {
 
     private String roleId;
     private String title;
+    private String lastName;
+    private String saltValue;
+    private String cratedDate;
+    private String modifiedDate;
+    private String status;
+
+    public User() {
+    }
+
+    public User(int userId, String firstName, String email, String password, String roleId, String title, String lastName, String saltValue, String cratedDate, String modifiedDate, String status) {
+        this.userId = userId;
+        this.firstName = firstName;
+        this.email = email;
+        this.password = password;
+        this.roleId = roleId;
+        this.title = title;
+        this.lastName = lastName;
+        this.saltValue = saltValue;
+        this.cratedDate = cratedDate;
+        this.modifiedDate = modifiedDate;
+        this.status = status;
+    }
 
     public String getRoleId() {
         return roleId;
@@ -81,16 +101,6 @@ public class User {
         this.status = status;
     }
 
-    private String lastName;
-    private String saltValue;
-    private String cratedDate;
-    private String modifiedDate;
-    private String status;
-
-
-
-
-
     public int getUserId() {
         return userId;
     }
@@ -121,23 +131,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public User() {
-    }
-
-    public User(int userId, String firstName, String email, String password, String roleId, String title, String lastName, String saltValue, String cratedDate, String modifiedDate, String status) {
-        this.userId = userId;
-        this.firstName = firstName;
-        this.email = email;
-        this.password = password;
-        this.roleId = roleId;
-        this.title = title;
-        this.lastName = lastName;
-        this.saltValue = saltValue;
-        this.cratedDate = cratedDate;
-        this.modifiedDate = modifiedDate;
-        this.status = status;
     }
 }
 

@@ -1,12 +1,10 @@
 package com.resume.genius.service.impl;
 
-
-
+import com.resume.genius.LoginMesage;
 import com.resume.genius.dto.LoginDto;
 import com.resume.genius.dto.UserDto;
-import com.resume.genius.repo.UserRepo;
-import com.resume.genius.LoginMesage;
 import com.resume.genius.entity.User;
+import com.resume.genius.repo.UserRepo;
 import com.resume.genius.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -18,12 +16,11 @@ import java.util.Optional;
 
 public class UserImpl implements UserService {
 
+    UserDto userDTO;
     @Autowired
     private UserRepo userRepo;
-
     @Autowired
     private PasswordEncoder passwordEncoder;
-
 
     @Override
     public String addUser(UserDto userDTO) {
@@ -63,15 +60,13 @@ public class UserImpl implements UserService {
                 userDTO.getCratedDate(),
                 userDTO.getModifiedDate(),
                 userDTO.getStatus()
-                );
-
+        );
 
 
         userRepo.save(user);
 
         return user.getFirstName();
     }
-    UserDto userDTO;
 
     @Override
     public LoginMesage loginUser(LoginDto loginDTO) {
@@ -92,7 +87,7 @@ public class UserImpl implements UserService {
 
                 return new LoginMesage("password Not Match", false);
             }
-        }else {
+        } else {
             return new LoginMesage("Email not exits", false);
         }
 

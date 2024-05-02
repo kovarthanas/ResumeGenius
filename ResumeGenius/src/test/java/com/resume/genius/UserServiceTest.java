@@ -1,9 +1,5 @@
 package com.resume.genius;
 
-import static java.lang.Boolean.TRUE;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
 import com.resume.genius.dto.LoginDto;
 import com.resume.genius.dto.UserDto;
 import com.resume.genius.repo.UserRepo;
@@ -15,6 +11,10 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import static java.lang.Boolean.TRUE;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 public class UserServiceTest {
@@ -32,6 +32,7 @@ public class UserServiceTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
     }
+
     @Test
     public void testAddUser() {
         UserDto userDTO = new UserDto();

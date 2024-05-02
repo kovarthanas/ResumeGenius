@@ -7,11 +7,9 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class ResumeGeniusApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ResumeGeniusApplication.class, args);
-	}
-
-
+    public static void main(String[] args) {
+        SpringApplication.run(ResumeGeniusApplication.class, args);
+    }
 
 
 }

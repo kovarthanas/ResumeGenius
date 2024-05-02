@@ -14,6 +14,10 @@ public class Experience {
         return company;
     }
 
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
     public String getLocation() {
         return location;
     }
@@ -26,10 +30,6 @@ public class Experience {
     public String toString() {
         return "Experience [company=" + company + ", jobrole=" + jobrole + ", period=" + period + ", location="
                 + location + ", responsibilities=" + responsibilities + "]";
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
     }
 
     public String getJobrole() {

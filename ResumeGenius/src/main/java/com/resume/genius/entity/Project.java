@@ -27,12 +27,12 @@ public class Project {
         return technology;
     }
 
+    public void setTechnology(String technology) {
+        this.technology = technology;
+    }
+
     @Override
     public String toString() {
         return "Project [name=" + name + ", description=" + description + ", technology=" + technology + "]";
-    }
-
-    public void setTechnology(String technology) {
-        this.technology = technology;
     }
 }

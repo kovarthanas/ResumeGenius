@@ -6,6 +6,13 @@ public class UserDto {
     private String username;
     private String email;
     private String password;
+    private String lastName;
+    private String saltValue;
+    private String cratedDate;
+    private String modifiedDate;
+    private String status;
+    private String roleId;
+    private String title;
 
     public UserDto(int userid, String username, String email, String password, String lastName, String saltValue, String cratedDate, String modifiedDate, String status, String roleId, String title) {
         this.userid = userid;
@@ -21,11 +28,15 @@ public class UserDto {
         this.title = title;
     }
 
-    private String lastName;
-    private String saltValue;
-    private String cratedDate;
-    private String modifiedDate;
-    private String status;
+    public UserDto() {
+    }
+
+    public UserDto(int userid, String username, String email, String password) {
+        this.userid = userid;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 
     public String getLastName() {
         return lastName;
@@ -83,11 +94,6 @@ public class UserDto {
         this.title = title;
     }
 
-    private String roleId;
-    private String title;
-    public UserDto() {
-    }
-
     public int getUserid() {
         return userid;
     }
@@ -117,13 +123,6 @@ public class UserDto {
     }
 
     public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public UserDto(int userid, String username, String email, String password) {
-        this.userid = userid;
-        this.username = username;
-        this.email = email;
         this.password = password;
     }
 } //create getters and setters

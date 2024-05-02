@@ -43,7 +43,7 @@ public class UserControllerTest {
     @Test
     public void testLoginUser() {
         LoginDto loginDTO = new LoginDto(); // create a sample login DTO object
-        LoginMesage loginMessage = new LoginMesage("Helllooo",TRUE); // create a sample login message object
+        LoginMesage loginMessage = new LoginMesage("Helllooo", TRUE); // create a sample login message object
 
         when(userService.loginUser(loginDTO)).thenReturn(loginMessage);
 

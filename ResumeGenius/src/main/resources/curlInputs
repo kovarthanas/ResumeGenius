@@ -29,3 +29,7 @@ curl --location 'http://localhost:8080/api/v1/user/login' \
 curl --location 'http://localhost:8080/api/v1/resume/view?filename=resume' \
 --header 'Cookie: JSESSIONID=63A6E7C36F7AB5326A68764FC45EC11E' \
 --data ''
+
+
+// search resumes
+curl --location 'http://localhost:8080/api/v1/resumes?eduLevel=2&minGcse=3&eduQualificationId=4&profQualificationId=2&skill=3&experience=2&sectorId=1'

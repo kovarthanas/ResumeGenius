@@ -1,0 +1,15 @@
+// signup
+http://localhost:8080/api/v1/user/signup
+{
+      "firstName":"name2",
+      "email":"dhjs",
+      "password":"pw"
+}
+
+
+///login
+http://localhost:8080/api/v1/user/login
+{
+    "email":"dhjs",
+    "password":"pw"
+}

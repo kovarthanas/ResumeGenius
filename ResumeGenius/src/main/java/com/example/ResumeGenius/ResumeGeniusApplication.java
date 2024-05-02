@@ -2,8 +2,9 @@ package com.example.ResumeGenius;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class ResumeGeniusApplication {
 
 	public static void main(String[] args) {
@@ -12,10 +13,5 @@ public class ResumeGeniusApplication {
 
 
 
-	//{
-	//    "name":"test1",
-	//    "username":"test1",
-	//    "email":"kovarththanas@gmail.com",
-	//    "password":"csa"
-	//}
+
 }

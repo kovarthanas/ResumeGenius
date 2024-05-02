@@ -27,15 +27,43 @@ public class UserIMPL implements UserService {
 
     @Override
     public String addUser(UserDTO userDTO) {
+        if (userDTO.getRoleId() == null) {
+            userDTO.setRoleId("Admin");
+        }
+        if (userDTO.getTitle() == null) {
+            userDTO.setTitle("Ms");
+        }
+        if (userDTO.getLastName() == null) {
+            userDTO.setLastName("Last Name");
+        }
+        if (userDTO.getSaltValue() == null) {
+            userDTO.setSaltValue("Salt");
+        }
+        if (userDTO.getCratedDate() == null) {
+            userDTO.setCratedDate("Date Cre");
+        }
+        if (userDTO.getModifiedDate() == null) {
+            userDTO.setModifiedDate("Mod Cre");
+        }
+        if (userDTO.getStatus() == null) {
+            userDTO.setStatus("Active");
+        }
 
-        User user = new User( userDTO.getUserid(),
+
+        userDTO.setStatus("Active");
+        User user = new User(
+                userDTO.getUserid(),
                 userDTO.getUsername(),
                 userDTO.getEmail(),
-                this.passwordEncoder.encode(userDTO.getPassword()),
-                "admin",
-                "Ms",
-                "Lname","saltval",
-                "createdDate","modDate","Active");
+                userDTO.getPassword(),
+                userDTO.getRoleId(),
+                userDTO.getTitle(),
+                userDTO.getLastName(),
+                userDTO.getSaltValue(),
+                userDTO.getCratedDate(),
+                userDTO.getModifiedDate(),
+                userDTO.getStatus()
+                );
 
 
 

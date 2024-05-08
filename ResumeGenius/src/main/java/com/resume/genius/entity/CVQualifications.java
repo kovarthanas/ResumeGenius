@@ -1,13 +1,11 @@
 package com.resume.genius.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cv_has_qualifications")
+@IdClass(CVQualificationsId.class)
 public class CVQualifications {
 
     @Id
@@ -22,7 +20,7 @@ public class CVQualifications {
 
     private String gcsePass;
 
-    // Constructors, getters, and setters
+    // Constructors
     public CVQualifications() {}
 
     public CVQualifications(CV cv, Qualification qualification, String gcsePass) {
@@ -31,6 +29,7 @@ public class CVQualifications {
         this.gcsePass = gcsePass;
     }
 
+    // Getters and Setters
     public CV getCv() {
         return cv;
     }

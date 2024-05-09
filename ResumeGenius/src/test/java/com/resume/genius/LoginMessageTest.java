@@ -1,5 +1,6 @@
 package com.resume.genius;
 
+import com.resume.genius.dto.LoginMessage;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,7 +12,7 @@ public class LoginMessageTest {
         // Create a LoginMessage object using the constructor
         String expectedMessage = "Test message";
         Boolean expectedStatus = true;
-        LoginMesage loginMessage = new LoginMesage(expectedMessage, expectedStatus);
+        LoginMessage loginMessage = new LoginMessage(expectedMessage, expectedStatus);
 
         // Verify that the constructor initializes the fields correctly
         assertEquals(expectedMessage, loginMessage.getMessage());
@@ -21,7 +22,7 @@ public class LoginMessageTest {
     @Test
     public void testSetters() {
         // Create a LoginMessage object
-        LoginMesage loginMessage = new LoginMesage("Initial message", true);
+        LoginMessage loginMessage = new LoginMessage("Initial message", true);
 
         // Set new values using setters
         String newMessage = "New message";

@@ -2,6 +2,7 @@ package com.resume.genius;
 
 import com.resume.genius.controller.UserController;
 import com.resume.genius.dto.LoginDto;
+import com.resume.genius.dto.LoginMessage;
 import com.resume.genius.dto.UserDto;
 import com.resume.genius.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -43,7 +44,7 @@ public class UserControllerTest {
     @Test
     public void testLoginUser() {
         LoginDto loginDTO = new LoginDto(); // create a sample login DTO object
-        LoginMesage loginMessage = new LoginMesage("Helllooo", TRUE); // create a sample login message object
+        LoginMessage loginMessage = new LoginMessage("Helllooo", TRUE); // create a sample login message object
 
         when(userService.loginUser(loginDTO)).thenReturn(loginMessage);
 

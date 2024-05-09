@@ -1,6 +1,6 @@
 package com.resume.genius.service.impl;
 
-import com.resume.genius.LoginMesage;
+import com.resume.genius.dto.LoginMessage;
 import com.resume.genius.dto.LoginDto;
 import com.resume.genius.dto.UserDto;
 import com.resume.genius.entity.User;
@@ -72,7 +72,7 @@ public class UserImpl implements UserService {
     }
 
     @Override
-    public LoginMesage loginUser(LoginDto loginDTO) {
+    public LoginMessage loginUser(LoginDto loginDTO) {
         String msg = "";
         User user1 = userRepo.findByEmail(loginDTO.getEmail());
         if (user1 != null) {
@@ -82,16 +82,16 @@ public class UserImpl implements UserService {
             if (isPwdRight) {
                 Optional<User> user = userRepo.findOneByEmailAndPassword(loginDTO.getEmail(), encodedPassword);
                 if (user.isPresent()) {
-                    return new LoginMesage("Login Success", true);
+                    return new LoginMessage("Login Success", true);
                 } else {
-                    return new LoginMesage("Login Failed", false);
+                    return new LoginMessage("Login Failed", false);
                 }
             } else {
 
-                return new LoginMesage("password Not Match", false);
+                return new LoginMessage("password Not Match", false);
             }
         } else {
-            return new LoginMesage("Email not exits", false);
+            return new LoginMessage("Email not exits", false);
         }
 
 

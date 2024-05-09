@@ -1,7 +1,7 @@
 package com.resume.genius.controller;
 
 
-import com.resume.genius.LoginMesage;
+import com.resume.genius.dto.LoginMessage;
 import com.resume.genius.dto.LoginDto;
 import com.resume.genius.dto.UserDto;
 import com.resume.genius.entity.User;
@@ -32,7 +32,7 @@ public class UserController {
 
     @PostMapping(path = "/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDto loginDTO) {
-        LoginMesage loginResponse = userService.loginUser(loginDTO);
+        LoginMessage loginResponse = userService.loginUser(loginDTO);
         return ResponseEntity.ok(loginResponse);
     }
 

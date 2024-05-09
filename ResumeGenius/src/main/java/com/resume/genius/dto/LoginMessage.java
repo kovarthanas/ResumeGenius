@@ -1,10 +1,10 @@
-package com.resume.genius;
+package com.resume.genius.dto;
 
-public class LoginMesage {
+public class LoginMessage {
     String message;
     Boolean status;
 
-    public LoginMesage(String message, Boolean status) {
+    public LoginMessage(String message, Boolean status) {
         this.message = message;
         this.status = status;
     }

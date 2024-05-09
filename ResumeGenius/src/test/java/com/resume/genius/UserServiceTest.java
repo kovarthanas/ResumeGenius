@@ -1,6 +1,7 @@
 package com.resume.genius;
 
 import com.resume.genius.dto.LoginDto;
+import com.resume.genius.dto.LoginMessage;
 import com.resume.genius.dto.UserDto;
 import com.resume.genius.repo.UserRepo;
 import com.resume.genius.service.UserService;
@@ -54,9 +55,9 @@ public class UserServiceTest {
         loginDTO.setPassword("password");
 
         // Mock the behavior of loginUser method
-        when(userService.loginUser(loginDTO)).thenReturn(new LoginMesage("Login Success", true));
+        when(userService.loginUser(loginDTO)).thenReturn(new LoginMessage("Login Success", true));
 
-        LoginMesage result = userService.loginUser(loginDTO);
+        LoginMessage result = userService.loginUser(loginDTO);
         assertNotNull(result);
         assertTrue(TRUE);
         assertEquals("Login Success", result.getMessage());

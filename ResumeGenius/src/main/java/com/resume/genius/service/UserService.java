@@ -1,6 +1,6 @@
 package com.resume.genius.service;
 
-import com.resume.genius.LoginMesage;
+import com.resume.genius.dto.LoginMessage;
 import com.resume.genius.dto.LoginDto;
 import com.resume.genius.dto.UserDto;
 import com.resume.genius.entity.User;
@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface UserService {
     String addUser(UserDto userDTO);
 
-    LoginMesage loginUser(LoginDto loginDTO);
+    LoginMessage loginUser(LoginDto loginDTO);
 
     List<User> getAllUsers();
 
